@@ -1,0 +1,111 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!--
+1.
+a)
+
+Bud
+    2.50
+Miller
+      3.00
+    
+b)
+
+Miller
+      3.00
+
+2.
+-->
+
+<Movies>
+  <Movie>
+    <Title>The Shawshank Redemption</Title>
+    <Year>2019</Year>
+    <Budget>200000000</Budget>
+    <Director>Frank Darabont</Director>
+    <Rating>9.8</Rating>
+    <Duration>130</Duration>
+  </Movie>
+  <Movie>
+    <Title>Django</Title>
+    <Year>2016</Year>
+    <Budget>500000000</Budget>
+    <Director>Quentin Tarantino</Director>
+    <Rating>8.4</Rating>
+    <Duration>140</Duration>
+  </Movie>
+  <Movie>
+    <Title>Titanic</Title>
+    <Year>1997</Year>
+    <Budget>2000000</Budget>
+    <Director>James Cameron</Director>
+    <Rating>7.8</Rating>
+    <Duration>90</Duration>
+  </Movie>
+</Movies>
+
+<Actors>
+  <Actor>
+    <Name>Leonardo DiCaprio</Name>
+    <Age>46</Age>
+    <CityBorn>Los Angeles</CityBorn>
+    <Height>1.83</Height>
+  </Actor>
+  <Actor>
+    <Name>Seth Rogen</Name>
+    <Age>25</Age>
+    <CityBorn>Vancouver</CityBorn>
+    <Height>1.8</Height>
+  </Actor>
+  <Actor>
+    <Name>Keanu Reeves</Name>
+    <Age>56</Age>
+    <CityBorn>Beirut</CityBorn>
+    <Height>1.86</Height>
+  </Actor>
+</Actors>
+
+<!--
+3.
+a)
+
+for $actor in Actors/Actor
+where $actor/Age < 35
+order by $actor/Age ascending
+return $actor
+
+Result:
+Leonardo DiCaprio
+  12
+  Los Angeles
+  1.83
+  
+
+Seth Rogen
+  25
+  Vancouver
+  1.8
+
+b)
+
+for $movie in Movies/Movie
+where $movie/Year > 2015 and $movie/Year < 2019
+order by $movie/Title descending
+return $movie
+
+Result:
+The Shawshank Redemption
+  2017
+  200000000
+  Frank Darabont
+  9.8
+  130
+  
+
+Django
+  2016
+  500000000
+  Quentin Tarantino
+  8.4
+  140
+
+-->
